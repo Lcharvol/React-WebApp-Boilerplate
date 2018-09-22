@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './pages/App';
+
 const Root = () => (
-    <div></div>
+    <App/>
 );
 
 ReactDOM.render(<Root />, document.getElementById('__NEWPROJECT__'));
