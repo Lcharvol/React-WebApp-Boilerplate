@@ -8,7 +8,7 @@ const App = ({
 
 }) => (
     <Container>
-        New Project
+        w
     </Container>
 );
 
