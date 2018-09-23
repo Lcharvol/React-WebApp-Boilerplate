@@ -8,9 +8,9 @@ export const Container = styled.div`
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-  background-color: ${BACKGROUND_COLOR};
+  background: ${BACKGROUND_COLOR};
   font-family: 'Raleway', sans-serif;
-  color: white;
+  color: rgb(35, 35, 35);
   font-weight: 0;
   font-size: 3em;
 `;
