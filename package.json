@@ -9,7 +9,7 @@
     "build": "webpack -p",
     "cli": "webpack --watch --display none",
     "pret": "pretty-quick",
-    "srv": "DEBUG=tetris:* babel-watch -w src src/server/index.js"
+    "srv-dev": "DEBUG=app:* babel-watch -w src src/server/index.js"
   },
   "contributors": [
     {
