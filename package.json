@@ -8,6 +8,7 @@
   "scripts": {
     "build": "webpack -p",
     "cli": "webpack --watch --display none",
+    "pretty-quick": "pretty-quick",
     "srv": "DEBUG=tetris:* babel-watch -w src src/server/index.js"
   },
   "contributors": [
@@ -17,6 +18,11 @@
       "url": "https://github.com/Lcharvol"
     }
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.1.0",
@@ -42,6 +48,9 @@
     "webpack": "3.10.0"
   },
   "devDependencies": {
+    "husky": "next",
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.7.0"
   },
   "eslint": {
     "root": true
