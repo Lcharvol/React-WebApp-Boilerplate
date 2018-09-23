@@ -8,29 +8,28 @@ const webpackConfig = {
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   plugins: [
     new BrowserSyncPlugin({
-        host: '0.0.0.0',
-        port: 8080,
-        browser: 'google chrome',
-        server: {
-          baseDir: 'public',
+      host: '0.0.0.0',
+      port: 8080,
+      browser: 'google chrome',
+      server: {
+        baseDir: 'public',
+      },
+      logSnippet: false,
+      reloadOnRestart: true,
+      notify: false,
+      middleware: [historyApiFallback()],
+      snippetOptions: {
+        blacklist: '*',
+        rule: {
+          match: /<\/body>/i,
+          fn: () => '',
         },
-        logSnippet: false,
-        reloadOnRestart: true,
-        notify: false,
-        middleware: [historyApiFallback()],
-        snippetOptions: {
-          blacklist: '*',
-          rule: {
-            match: /<\/body>/i,
-            fn: () => '',
-          },
-        },
-      }),
-  
+      },
+    }),
   ],
   module: {
     rules: [
