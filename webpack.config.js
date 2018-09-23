@@ -7,7 +7,7 @@ const webpackConfig = {
   entry: ['babel-polyfill', './src/client/index.js'],
 
   output: {
-    path: path.join(__dirname, '/build'),
+    path: path.join(__dirname, '/public'),
     filename: 'bundle.js',
     publicPath: '/',
   },

@@ -8,8 +8,8 @@
   "scripts": {
     "build": "webpack -p",
     "cli": "webpack --watch --display none",
-    "pret": "pretty-quick",
-    "srv-dev": "DEBUG=app:* webpack-dashboard -- babel-watch -w src src/server/index.js"
+    "srv": "DEBUG=app:* webpack-dashboard -- babel-watch -w src src/server/index.js",
+    "pret": "pretty-quick"
   },
   "contributors": [
     {
@@ -51,6 +51,10 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-config": "^1.0.0-beta.4",
+    "react-router-dom": "^4.3.1",
+    "react-router-native": "^4.3.0",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
