@@ -1,11 +1,27 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { map } from 'ramda';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Home from './pages/Home';
 
+const routes = [
+  {
+    key: 0,
+    path: '/',
+    component: Home,
+    exact: true,
+  },
+];
+
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={Home} />
+    {map(
+      route => (
+        <Route {...route} />
+      ),
+      routes,
+    )}
+    <Redirect to="/" />
   </Switch>
 );
 
