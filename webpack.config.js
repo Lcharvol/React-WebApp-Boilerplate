@@ -46,6 +46,17 @@ const webpackConfig = {
         loaders: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[hash].[ext]',
+            },
+          },
+        ],
+      },
+      {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         loader: 'file?name=public/[name].[ext]',
       },

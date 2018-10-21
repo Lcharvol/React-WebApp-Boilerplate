@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack -p",
     "cli": "webpack --watch --display none",
-    "srv": "DEBUG=app:* webpack-dashboard -- babel-watch -w src src/server/index.js",
+    "srv": "DEBUG=app:* webpack-dashboard -c blue -- babel-watch -w src src/server/index.js",
     "pret": "pretty-quick"
   },
   "contributors": [
@@ -45,6 +45,7 @@
     "connect-history-api-fallback": "^1.5.0",
     "debug": "^4.0.1",
     "express": "^4.16.3",
+    "file-loader": "^2.0.0",
     "fs": "^0.0.1-security",
     "http": "^0.0.0",
     "path": "^0.12.7",
